@@ -2,6 +2,9 @@
 flake8-ycm
 ==========
 
+.. image:: https://img.shields.io/travis/micbou/flake8-ycm.svg?label=Linux
+  :target: https://travis-ci.com/micbou/flake8-ycm
+
 A `Flake8 <https://flake8.readthedocs.io/en/latest/>`_ plugin that enforces
 `YouCompleteMe <https://github.com/Valloric/YouCompleteMe>`_ and
 `ycmd <https://github.com/Valloric/ycmd>`_ coding style.
