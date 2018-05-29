@@ -1,0 +1,19 @@
+codecov:
+  notify:
+    require_ci_to_pass: yes
+
+coverage:
+  precision: 2
+  round: down
+  range: 70...100
+
+  # See https://docs.codecov.io/docs/commit-status
+  status:
+    project: true
+    patch: true
+    changes: true
+
+# See https://docs.codecov.io/docs/pull-request-comments#section-configuration
+comment:
+  layout: "header, diff"
+  behavior: default
