@@ -2,6 +2,15 @@
 flake8-ycm
 ==========
 
+.. image:: https://img.shields.io/pypi/v/flake8-ycm.svg
+  :target: https://pypi.org/project/flake8-ycm/
+
+.. image:: https://img.shields.io/pypi/l/flake8-ycm.svg
+  :target: https://pypi.org/project/flake8-ycm/
+
+.. image:: https://img.shields.io/pypi/pyversions/flake8-ycm.svg
+  :target: https://pypi.org/project/flake8-ycm/
+
 .. image:: https://img.shields.io/travis/micbou/flake8-ycm.svg?label=Linux
   :target: https://travis-ci.com/micbou/flake8-ycm
 
