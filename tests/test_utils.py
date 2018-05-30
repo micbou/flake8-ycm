@@ -19,8 +19,7 @@ import sys
 import tempfile
 from collections import namedtuple
 from contextlib import contextmanager
-from flake8.main.cli import main as flake8_main
-from hamcrest import assert_that, contains, equal_to
+from hamcrest import assert_that, contains
 from textwrap import dedent
 
 
