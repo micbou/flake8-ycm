@@ -53,7 +53,7 @@ setup(
   zip_safe = False,
   keywords = 'flake8, YouCompleteMe, ycmd, coding style',
   classifiers=[
-    'Development Status :: 1 - Planning',
+    'Development Status :: 4 - Beta',
     'Framework :: Flake8',
     'Intended Audience :: Developers',
     'License :: OSI Approved :: Apache Software License',
