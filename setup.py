@@ -44,6 +44,7 @@ setup(
     'flake8.extension': [
       'YCM11 = flake8_ycm:Indentation',
       'YCM20 = flake8_ycm:SpacesInsideBrackets',
+      'YCM25 = flake8_ycm:SpacesNamedParameter',
     ]
   },
   install_requires = [

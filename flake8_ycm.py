@@ -91,3 +91,33 @@ def SpacesInsideBrackets( logical_line, tokens ):
 
 SpacesInsideBrackets.name = 'flake8-ycm'
 SpacesInsideBrackets.version = __version__
+
+
+def SpacesNamedParameter( logical_line, tokens ):
+  """Require spaces around the equal sign for named parameters."""
+  code = 'YCM251'
+  message = ' exactly one space required around = for named parameter'
+  parentheses_level = 0
+  for index in range( len( tokens ) ):
+    _, prev_text, _, prev_end, _ = ( tokens[ index - 1 ] if index - 1 >= 0 else
+                                     ( None, None, None, None, None ) )
+    _, text, start, end, _ = tokens[ index ]
+    _, next_text, next_start, _, _ = (
+      tokens[ index + 1 ] if index + 1 < len( tokens ) else
+      ( None, None, None, None, None ) )
+    if text == '(':
+      parentheses_level += 1
+    elif text == ')':
+      parentheses_level -= 1
+    elif text == '=' and parentheses_level:
+      if ( ( prev_end and
+           prev_end[ 0 ] == end[ 0 ] and
+           end[ 1 ] - prev_end[ 1 ] != 2 ) or
+           ( next_start and
+             next_start[ 0 ] == start[ 0 ] and
+             next_start[ 1 ] - start[ 1 ] != 2 ) ):
+        yield start, code + message
+
+
+SpacesNamedParameter.name = 'flake8-ycm'
+SpacesNamedParameter.version = __version__

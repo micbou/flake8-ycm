@@ -37,4 +37,5 @@ YCM115 expected an indented block of `n` spaces (comment)
 YCM201 exactly one space required after a left bracket
 YCM202 exactly one space required before a right bracket
 YCM204 no spaces between brackets for empty content
+YCM251 exactly one space required around = for named parameter
 ====== ===========

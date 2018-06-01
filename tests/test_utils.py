@@ -59,12 +59,13 @@ def RunTest( content, expected_errors ):
     print( exception.output.decode( 'utf8' ) )
     raise
 
+  output = output.decode( 'utf8' )
   actual_errors = []
-  for line in output.decode( 'utf8' ).splitlines():
+  for line in output.splitlines():
     match = FLAKE8_ERROR_REGEX.search( line )
     if match:
       actual_errors.append( Error( int( match.group( 'line' ) ),
                                    int( match.group( 'column' ) ),
                                    match.group( 'code' ),
                                    match.group( 'message' ) ) )
-  assert_that( actual_errors, contains( *expected_errors ) )
+  assert_that( actual_errors, contains( *expected_errors ), '\n' + output )

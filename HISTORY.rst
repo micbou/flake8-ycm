@@ -5,6 +5,7 @@ Release history
 0.2.0 (pending)
 ---------------
 
+* Add YCM251 rule.
 * Fix TypeError exception for YCM201 and YCM202 rules.
 
 0.1.0 (2018-05-30)
