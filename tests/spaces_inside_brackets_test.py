@@ -85,3 +85,16 @@ def YCM204_test():
       Error( 2, 14, 'YCM204', 'no spaces between [ and ] for empty content' ),
       Error( 3, 14, 'YCM204', 'no spaces between { and } for empty content' ) ]
   )
+
+
+def InvalidSyntax_test():
+  RunTest(
+    """
+    {
+      'key': 'value' )
+    }
+
+    {
+    """,
+    []
+  )

@@ -73,6 +73,7 @@ def SpacesInsideBrackets( logical_line, tokens ):
         yield end, code + message
       if ( next_token_type not in [ tokenize.NL, tokenize.NEWLINE ] and
            next_text != CORRESPONDING_BRACKET[ text ] and
+           next_start and
            next_start[ 0 ] == start[ 0 ] and
            next_start[ 1 ] - start[ 1 ] != 2 ):
         code = 'YCM201'
@@ -80,6 +81,7 @@ def SpacesInsideBrackets( logical_line, tokens ):
         yield end, code + message
     if text in RIGHT_BRACKETS:
       if ( prev_text != CORRESPONDING_BRACKET[ text ] and
+           prev_end and
            prev_end[ 0 ] == end[ 0 ] and
            end[ 1 ] - prev_end[ 1 ] != 2 ):
         code = 'YCM202'
