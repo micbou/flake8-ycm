@@ -53,9 +53,11 @@ def RunTest( content, expected_errors ):
                                           '-m', 'flake8',
                                           '--jobs=1',
                                           '--select=YCM',
+                                          '--exit-zero',
                                           filename ], env = env )
   except subprocess.CalledProcessError as exception:
-    output = exception.output
+    print( exception.output.decode( 'utf8' ) )
+    raise
 
   actual_errors = []
   for line in output.decode( 'utf8' ).splitlines():
